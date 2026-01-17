@@ -22,7 +22,7 @@ define('CONTACT_EMAIL', 'contact@jktv.live');
 // ADMIN CREDENTIALS - Change these for security!
 // =============================================================================
 define('ADMIN_USERNAME', 'admin');
-define('ADMIN_PASSWORD', 'JKTVAdmin2024');
+define('ADMIN_PASSWORD', '123456');
 
 // =============================================================================
 // STREAM SETTINGS

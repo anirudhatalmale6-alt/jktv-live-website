@@ -40,8 +40,13 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <header class="header">
         <nav class="nav-container">
             <a href="/" class="logo">
-                <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/assets/images/logo.png')): ?>
+                <?php
+                $logo_png = $_SERVER['DOCUMENT_ROOT'] . '/assets/images/logo.png';
+                $logo_jpg = $_SERVER['DOCUMENT_ROOT'] . '/assets/images/logo.jpg';
+                if (file_exists($logo_png)): ?>
                     <img src="/assets/images/logo.png" alt="<?php echo SITE_NAME; ?>">
+                <?php elseif (file_exists($logo_jpg)): ?>
+                    <img src="/assets/images/logo.jpg" alt="<?php echo SITE_NAME; ?>">
                 <?php else: ?>
                     <?php echo SITE_NAME; ?>
                 <?php endif; ?>
